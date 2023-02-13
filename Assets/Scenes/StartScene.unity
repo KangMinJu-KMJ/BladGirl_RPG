@@ -560,7 +560,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1611983011}
+      - m_Target: {fileID: 0}
         m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
@@ -1889,7 +1889,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1611983011}
+      - m_Target: {fileID: 0}
         m_MethodName: Sounds
         m_Mode: 6
         m_Arguments:
@@ -3425,7 +3425,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1611983011}
+      - m_Target: {fileID: 0}
         m_MethodName: Sounds
         m_Mode: 6
         m_Arguments:
@@ -4111,7 +4111,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1611983011}
+      - m_Target: {fileID: 0}
         m_MethodName: ScreenSetting
         m_Mode: 6
         m_Arguments:
@@ -4247,13 +4247,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bd730413332d944fbc960e5bf0c6139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rbody: {fileID: 0}
-  capCol: {fileID: 0}
-  source: {fileID: 0}
-  swordClip: {fileID: 0}
-  FootSteps: []
-  tr: {fileID: 0}
-  ani: {fileID: 0}
 --- !u!54 &1313827567
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5439,7 +5432,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1611983011}
+      - m_Target: {fileID: 0}
         m_MethodName: ScreenSetting
         m_Mode: 6
         m_Arguments:
@@ -5660,7 +5653,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1611983010}
   - component: {fileID: 1611983011}
-  - component: {fileID: 1611983012}
   m_Layer: 0
   m_Name: GameControlMenu
   m_TagString: Untagged
@@ -5691,27 +5683,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1611983009}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ce3ac54481e1c04db22f7689a5d0c6b, type: 3}
+  m_Script: {fileID: 11500000, guid: 20c148cdf7536e9458a76f3545f1017b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseImage: {fileID: 180493670}
-  pauseMenu: {fileID: 128821386}
-  soundMenu: {fileID: 1003001507}
-  screenMenu: {fileID: 1984841235}
---- !u!114 &1611983012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611983009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 302d15f4b20d3414b86f1b945d1a6529, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropDown: {fileID: 1436045302}
-  _light: {fileID: 170076733}
+  pauseImage: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  soundMenu: {fileID: 0}
+  screenMenu: {fileID: 0}
 --- !u!1 &1648769354
 GameObject:
   m_ObjectHideFlags: 0
@@ -6874,7 +6852,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1611983011}
+      - m_Target: {fileID: 0}
         m_MethodName: SaveSetting
         m_Mode: 6
         m_Arguments:
