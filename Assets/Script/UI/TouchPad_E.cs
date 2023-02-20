@@ -41,27 +41,20 @@ public class TouchPad_E : MonoBehaviour
                 if (_touch.phase == TouchPhase.Began)
                 {
                     if (_touch.position.x <= (_StartPos.x + _dragRadius))
-                    {
                         _touchID = i;
-                    }
+
                     if (_touch.position.y <= (_StartPos.y + _dragRadius))
-                    {
                         _touchID = i;
-                    }
                 }
                 if(_touch.phase == TouchPhase.Moved || _touch.phase == TouchPhase.Stationary)
                 {
                     if(_touchID == i)
-                    {
                         HandleInput(touchPos);
-                    }
                 }
                 if(_touch.phase == TouchPhase.Ended)
                 {
                     if(_touchID == i)
-                    {
                         _touchID = -1;
-                    }
                 }
             }
         }
@@ -79,9 +72,7 @@ public class TouchPad_E : MonoBehaviour
                 Debug.Log(_StartPos + diffVector);
             }
             else
-            {
                 touchPad.position = input;
-            }
 
         }
         else
