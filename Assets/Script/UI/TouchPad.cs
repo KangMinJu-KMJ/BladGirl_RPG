@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TouchPad_E : MonoBehaviour
+public class TouchPad : MonoBehaviour
 {
     [SerializeField]
     private RectTransform touchPad;
@@ -10,13 +10,13 @@ public class TouchPad_E : MonoBehaviour
     private Vector3 _StartPos = Vector3.zero;
     private float _dragRadius = 90f;
     private bool _buttonPressed;
-    private PlayerMovement_E playerMovementE;
+    private PlayerMovement playerMovementE;
     void Start()
     {
         _buttonPressed = false;
         touchPad = GetComponent<RectTransform>();
         _StartPos = touchPad.position;
-        playerMovementE = GameObject.FindWithTag("Player").GetComponent<PlayerMovement_E>();
+        playerMovementE = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
     }
 
     public void ButtonDown()

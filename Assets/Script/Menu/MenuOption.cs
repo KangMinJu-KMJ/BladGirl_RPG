@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class MenuOption_E : MonoBehaviour
+public class MenuOption : MonoBehaviour
 {
     public Transform dropDown;
     public GameObject _light;

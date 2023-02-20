@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameControl_E : MonoBehaviour
+public class GameControl : MonoBehaviour
 {
 
     public RectTransform pauseImage;
