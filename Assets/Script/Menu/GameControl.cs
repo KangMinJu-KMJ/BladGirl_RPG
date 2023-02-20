@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {
-
     public RectTransform pauseImage;
     public RectTransform pauseMenu;
     private GameObject player;
@@ -22,7 +21,7 @@ public class GameControl : MonoBehaviour
     }
 
   
-    void Update()
+    void Update()//각 플랫폼에 따른 일시정지 함수 실행
     {
         if(Application.platform == RuntimePlatform.WindowsEditor)
         {
@@ -41,14 +40,13 @@ public class GameControl : MonoBehaviour
         }
     }
 
-    public void Pause()
+    public void Pause()//일시정지 함수
     {
         if(pauseImage.gameObject.activeInHierarchy == false)
         {
             if(pauseMenu.gameObject.activeInHierarchy==false)
-            {
                 pauseMenu.gameObject.SetActive(true);
-            }
+
             pauseImage.gameObject.SetActive(true);
             Time.timeScale = 0f;
             player.SetActive(false);
@@ -61,7 +59,7 @@ public class GameControl : MonoBehaviour
         }
     }
 
-    public void Sounds(bool open)
+    public void Sounds(bool open)//메뉴 중 사운드UI On/Off
     {
         if (open)
         {
@@ -74,7 +72,7 @@ public class GameControl : MonoBehaviour
             pauseMenu.gameObject.SetActive(true);
         }
     }
-    public void ScreenSetting(bool open)
+    public void ScreenSetting(bool open)//메뉴 중 ScreenUI On/Off
     {
         if (open)
         {
@@ -89,7 +87,7 @@ public class GameControl : MonoBehaviour
             screenMenu.gameObject.SetActive(false);
         }
     }
-    public void SaveSetting(bool isQuit)
+    public void SaveSetting(bool isQuit)//Save 기능
     {   //Set하면서 위에서 받은(Get)값을 가져옴
         PlayerPrefs.SetFloat("x", player.transform.position.x);
         PlayerPrefs.SetFloat("y", player.transform.position.y);
@@ -103,7 +101,7 @@ public class GameControl : MonoBehaviour
 
     }
 
-    public void PlayGame()
+    public void PlayGame()//Scene 이동
     {
         SceneManager.LoadScene("PlayScene");
     }
