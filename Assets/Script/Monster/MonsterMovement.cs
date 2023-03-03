@@ -87,7 +87,7 @@ public class MonsterMovement : MonoBehaviour
     }
 
     void Trace()// 플레이어 발견 이후
-    {//쫓아가야하는데 왜 함수가 ㅇ비어잇을가요 ?
+    {
         Vector3 traceDist = target.position - tr.position;
         tr.rotation = Quaternion.Slerp(tr.rotation, Quaternion.LookRotation(traceDist)
             , Time.deltaTime * 5.0f);
@@ -128,13 +128,10 @@ public class MonsterMovement : MonoBehaviour
         if(Vector3.Distance(tr.position, Nodes[currentNode].position)<4.5f)
         {
             if(currentNode==Nodes.Count -1)
-            {
                 currentNode = 0;
-            }
+
             else
-            {
                 currentNode++;
-            }
         }
     }
 }

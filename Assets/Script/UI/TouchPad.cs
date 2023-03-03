@@ -10,13 +10,13 @@ public class TouchPad : MonoBehaviour
     private Vector3 _StartPos = Vector3.zero;
     private float _dragRadius = 90f;
     private bool _buttonPressed;
-    private PlayerMovement playerMovementE;
+    private PlayerMovement playerMovement;
     void Start()
     {
         _buttonPressed = false;
         touchPad = GetComponent<RectTransform>();
         _StartPos = touchPad.position;
-        playerMovementE = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
+        playerMovement = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
     }
 
     public void ButtonDown()
@@ -81,9 +81,9 @@ public class TouchPad : MonoBehaviour
         }
         Vector3 diff = touchPad.position - _StartPos;
         Vector3 normalDiff = new Vector3(diff.x / _dragRadius, diff.y / _dragRadius);
-        if(playerMovementE != null)
+        if(playerMovement != null)
         {
-            playerMovementE.OnStickChanged(normalDiff);
+            playerMovement.OnStickChanged(normalDiff);
         }
     }
     void Update()

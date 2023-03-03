@@ -96,7 +96,7 @@ public class GameControl : MonoBehaviour
         if (isQuit)
         {
             Time.timeScale = 1.0f;
-            SceneManager.LoadScene("StartScene_E");
+            SceneManager.LoadScene("StartScene");
         }
 
     }
